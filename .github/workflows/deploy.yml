@@ -3,14 +3,14 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     environment: production
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
       - uses: appleboy/ssh-action@v1.0.3
@@ -21,9 +21,10 @@ jobs:
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
             cd ecommerce-admin
-            git fetch origin master
-            git reset --hard origin/master
-            npm install
+            git fetch origin main
+            git reset --hard origin/main
+            printf "%s" "${{ secrets.ENV_FILE }}" > .env
+            npm i
             npm run build
-            pm2 restart ecommerce-admin
+            pm2 reload ecosystem.config.js
             echo "Deploy successful!"
