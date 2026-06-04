@@ -9,6 +9,7 @@ import ProductFormPage from "@/pages/dashboard/products/ProductFormPage";
 import OrderPage from "@/pages/dashboard/orders/OrderPage";
 import OrderDetailPage from "@/pages/dashboard/orders/OrderDetailPage";
 import CategoryPage from "@/pages/dashboard/categories/CategoryPage";
+import RatingListPage from "@/pages/dashboard/ratings/RatingListPage";
 /**
  * AppRouter
  *
@@ -39,6 +40,7 @@ const AppRouter = () => {
 						<Route path="/orders" element={<OrderPage />} />
 						<Route path="/orders/:id" element={<OrderDetailPage />} />
 						<Route path="/categories" element={<CategoryPage />} />
+						<Route path="/ratings" element={<RatingListPage />} />
 					</Route>
 				</Route>
 

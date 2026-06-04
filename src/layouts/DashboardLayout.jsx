@@ -4,7 +4,6 @@ import {
 	LayoutDashboard,
 	ShoppingBag,
 	ClipboardList,
-	Users,
 	Settings,
 	LogOut,
 	Menu,
@@ -12,6 +11,7 @@ import {
 	ChevronDown,
 	Bell,
 	Layers,
+	Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -32,6 +32,7 @@ const navItems = [
 	{ path: "/products", label: "Sản phẩm", icon: ShoppingBag },
 	{ path: "/categories", label: "Danh mục", icon: Layers },
 	{ path: "/orders", label: "Đơn hàng", icon: ClipboardList },
+	{ path: "/ratings", label: "Đánh giá", icon: Star },
 	// { path: "/settings", label: "Cài đặt", icon: Settings },
 ];
 
