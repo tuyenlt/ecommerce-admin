@@ -17,7 +17,13 @@ export default defineConfig({
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
 		},
 	},
+	optimizeDeps: {
+		include: ['recharts']
+	},
 	build: {
 		outdir: 'dist',
+		commonjsOptions: {
+			transformMixedEsModules: true
+		}
 	}
 })
