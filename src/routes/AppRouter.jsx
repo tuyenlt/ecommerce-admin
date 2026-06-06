@@ -10,6 +10,9 @@ import OrderPage from "@/pages/dashboard/orders/OrderPage";
 import OrderDetailPage from "@/pages/dashboard/orders/OrderDetailPage";
 import CategoryPage from "@/pages/dashboard/categories/CategoryPage";
 import RatingListPage from "@/pages/dashboard/ratings/RatingListPage";
+import ChatPage from "@/pages/dashboard/chat/ChatPage";
+import BannerListPage from "@/pages/dashboard/banners/BannerListPage";
+import FlashSaleListPage from "@/pages/dashboard/flash-sales/FlashSaleListPage";
 /**
  * AppRouter
  *
@@ -41,6 +44,9 @@ const AppRouter = () => {
 						<Route path="/orders/:id" element={<OrderDetailPage />} />
 						<Route path="/categories" element={<CategoryPage />} />
 						<Route path="/ratings" element={<RatingListPage />} />
+						<Route path="/chat" element={<ChatPage />} />
+						<Route path="/banners" element={<BannerListPage />} />
+						<Route path="/flash-sales" element={<FlashSaleListPage />} />
 					</Route>
 				</Route>
 

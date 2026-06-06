@@ -12,6 +12,9 @@ import {
 	Bell,
 	Layers,
 	Star,
+	MessageSquare,
+	Image,
+	Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -31,8 +34,11 @@ const navItems = [
 	{ path: "/", label: "Tổng quan", icon: LayoutDashboard, exact: true },
 	{ path: "/products", label: "Sản phẩm", icon: ShoppingBag },
 	{ path: "/categories", label: "Danh mục", icon: Layers },
+	{ path: "/banners", label: "Banner", icon: Image },
+	{ path: "/flash-sales", label: "Flash Sale", icon: Zap },
 	{ path: "/orders", label: "Đơn hàng", icon: ClipboardList },
 	{ path: "/ratings", label: "Đánh giá", icon: Star },
+	{ path: "/chat", label: "Hỗ trợ", icon: MessageSquare },
 	// { path: "/settings", label: "Cài đặt", icon: Settings },
 ];
 
